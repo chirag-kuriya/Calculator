@@ -1,0 +1,38 @@
+Create 2 Empty stack
+  1st for values
+  2nd for operators
+
+Traverse the input of user from left to right.
+
+start of the loop
+ 
+if : char is number push into stack
+
+else if : operator stack is empty or at the top of stack char = '(' then push char
+
+else if : char = ')' then 
+
+    while we did not find '(' in stack 
+        calculate the value and push the value in to value stack and pop the operator
+  
+    pop the '(' from operator stack
+
+else :
+
+    if : traversed char is equal to + or - then calculate the value and push into value stack
+    and pop the operator and push new char
+
+    if : traversed char is equal to * or /
+    
+      if : top of the operator stack value is * or /
+           then calculate the value and push into value stack
+           and pop the operator and push new char
+    
+      else :  Direct push the traversed char in to operator stack
+    
+end of the loop
+
+while ( stack size > 1 )
+   pop top 2 value and on operator and calculate the value
+
+print the value
