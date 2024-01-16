@@ -32,7 +32,7 @@ for (let i = 0; i < string.length; i++) {
             if (op[op.length - 1] == "/") val.push(v1 / v2);
             op.pop();
         }
-        op.pop();
+        op.pop(); // it will pop out the opening bracket
     }
     else {
         if (char == "+" || char == "-") {
