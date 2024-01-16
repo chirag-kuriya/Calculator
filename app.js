@@ -19,7 +19,7 @@ for (let i = 0; i < string.length; i++) {
         }
         val.push(num)
     }
-    else if (op.length == 0 || op[op.length - 1] == '(' || char == '(') {
+    else if (op.length == 0 ||  char == '('||(op[op.length - 1] == '('&&char!=')')) {
         op.push(char);
     }
     else if (char == ')') {
@@ -32,7 +32,7 @@ for (let i = 0; i < string.length; i++) {
             if (op[op.length - 1] == "/") val.push(v1 / v2);
             op.pop();
         }
-        op.pop(); // it will pop out the opening bracket
+        op.pop();
     }
     else {
         if (char == "+" || char == "-") {
